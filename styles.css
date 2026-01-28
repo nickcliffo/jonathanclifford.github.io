@@ -331,8 +331,10 @@ button:focus,
 
 .cert-section {
     width: 100%;
-    max-width: 1500px;   /* controls how wide the whole cert area is */
-    margin: 60px auto 0 auto;  /* centers it horizontally */
+    max-width: 1500px;
+    /* controls how wide the whole cert area is */
+    margin: 60px auto 0 auto;
+    /* centers it horizontally */
     text-align: center;
     background: transparent;
     padding-bottom: 80px;
@@ -347,7 +349,8 @@ button:focus,
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    justify-content: center;   /* keeps grid centered inside section */
+    justify-content: center;
+    /* keeps grid centered inside section */
 }
 
 .cert-item {
@@ -369,7 +372,8 @@ button:focus,
 /* PDF preview box (like resume but smaller) */
 .cert-viewer {
     width: 100%;
-    height: 600px;   /* ⬅ bigger preview window */
+    height: 600px;
+    /* ⬅ bigger preview window */
     border: 2px solid rgba(0, 136, 169, 0.7);
     border-radius: 12px;
     box-shadow: 0 0 18px rgba(0, 136, 169, 0.18);
@@ -408,34 +412,145 @@ button:focus,
 }
 
 .contact-card {
-  max-width: 700px;
-  margin: 30px auto 0;
-  padding: 22px;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  background: var(--card);
-  box-shadow: var(--shadow);
+    max-width: 700px;
+    margin: 30px auto 0;
+    padding: 22px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    box-shadow: var(--shadow);
 }
 
 .contact-card label {
-  display: block;
-  text-align: left;
-  margin-bottom: 14px;
-  background: transparent;
+    display: block;
+    text-align: left;
+    margin-bottom: 14px;
+    background: transparent;
 }
 
 .contact-card input,
 .contact-card textarea {
-  width: 100%;
-  margin-top: 6px;
-  padding: 10px 12px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: #1f2024;
-  color: var(--text);
-  font-family: "Montserrat", sans-serif;
+    width: 100%;
+    margin-top: 6px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: #1f2024;
+    color: var(--text);
+    font-family: "Montserrat", sans-serif;
 }
 
+/* ================= CONTACT PAGE ================= */
+
+.contact-main {
+    padding: 40px 0;
+    background: transparent;
+}
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 20px;
+    background: transparent;
+}
+
+.contact-card {
+    max-width: 720px;
+    margin: 30px auto 0;
+    padding: 22px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    box-shadow: var(--shadow);
+}
+
+.contact-card label {
+    display: block;
+    margin-bottom: 14px;
+    background: transparent;
+}
+
+.contact-card input,
+.contact-card textarea {
+    width: 100%;
+    margin-top: 6px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: #1f2024;
+    color: var(--text);
+}
+
+.form-note {
+    margin-top: 12px;
+    color: var(--muted);
+    min-height: 20px;
+    background: transparent;
+}
+
+/* Blur page */
+.page-blur {
+    filter: blur(7px);
+    transition: filter 0.25s ease;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    place-items: center;
+    background: rgba(0, 0, 0, 0.60);
+    z-index: 9999;
+}
+
+.overlay.show {
+    display: grid;
+}
+
+.overlay-card {
+    width: min(560px, 92%);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.overlay-card p {
+    color: var(--muted);
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.overlay-actions {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.overlay-btn {
+    padding: 10px 22px;
+    border-radius: 50px;
+    background: rgba(0, 136, 169, 1);
+    color: #edf0f1;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.overlay-btn:hover {
+    background: rgb(6, 115, 143);
+}
+
+.overlay-btn.secondary {
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.overlay-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.16);
+}
 
 @media (max-width: 900px) {
     .cert-grid {

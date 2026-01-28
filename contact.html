@@ -2,94 +2,82 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <header>
-        <img class="logo" src="img/NameLogo.png" width="150" height="150" alt="logo">
-        <nav>
-            <ul class="nav__links">
-                <li><a href="index.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="documents.html">Documents</a></li>
-            </ul>
-        </nav>
-        <a class="cta" href="contact.html"><button>Contact</button></a>
-    </header>
 
-    <main class="container" style="padding: 40px 0; background: transparent;">
-        <h1 style="text-align:center; background: transparent;">Contact Me</h1>
+    <!-- Wrap everything that should blur -->
+    <div id="pageWrap">
 
-        <form id="contactForm" class="contact-card">
-            <label>
-                Name *
-                <input type="text" id="name" required />
-            </label>
+        <header>
+            <img class="logo" src="img/NameLogo.png" width="150" height="150" alt="logo">
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="documents.html">Documents</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="contact.html"><button>Contact</button></a>
+        </header>
 
-            <label>
-                Email *
-                <input type="email" id="email" required />
-            </label>
+        <main class="container contact-main">
+            <h1 class="contact-title">Contact Me</h1>
 
-            <label>
-                Subject *
-                <input type="text" id="subject" required />
-            </label>
+            <form id="contactForm" class="contact-card">
+                <label>
+                    Name *
+                    <input type="text" id="name" required />
+                </label>
 
-            <label>
-                Message *
-                <textarea id="message" rows="6" required></textarea>
-            </label>
+                <label>
+                    Email *
+                    <input type="email" id="email" required />
+                </label>
 
-            <button type="submit">Send Email</button>
-            <p id="formNote" style="margin-top:12px; color: var(--muted); background: transparent;"></p>
-        </form>
-    </main>
+                <label>
+                    Subject *
+                    <input type="text" id="subject" required />
+                </label>
 
-    <script>
-        const form = document.getElementById("contactForm");
-        const note = document.getElementById("formNote");
+                <label>
+                    Message *
+                    <textarea id="message" rows="6" required></textarea>
+                </label>
 
-        form.addEventListener("submit", (e) => {
-            e.preventDefault();
+                <button type="submit">Send Email</button>
+                <p id="formNote" class="form-note"></p>
+            </form>
+        </main>
 
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const subject = document.getElementById("subject").value.trim();
-            const message = document.getElementById("message").value.trim();
+        <footer class="ftr">
+            <p>
+                Jonathan Clifford &copy; 2025 |
+                <a href="tel:4178308898">(417)830-8898</a> |
+                <a href="mailto:jnicholasclifford@gmail.com">jnicholasclifford@gmail.com</a>
+            </p>
+        </footer>
 
-            // Build a nice email body
-            const body =
-                `Name: ${name}
-Email: ${email}
+    </div>
 
-Message:
-${message}
-`;
+    <!-- Overlay (NOT inside pageWrap so it doesn't blur) -->
+    <div id="afterSendOverlay" class="overlay" aria-hidden="true">
+        <div class="overlay-card">
+            <h2>Thanks!</h2>
+            <p>Your email draft should be open. If not, try again or email me directly.</p>
 
-            // Your email address goes here:
-            const to = "jnicholasclifford@gmail.com";
+            <div class="overlay-actions">
+                <a class="overlay-btn" href="index.html">Return to Main Page</a>
+                <a class="overlay-btn secondary" href="mailto:jnicholasclifford@gmail.com">Email Me Directly</a>
+            </div>
+        </div>
+    </div>
 
-            // mailto link (encode to handle spaces/newlines)
-            const mailtoLink =
-                `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-            note.textContent = "Opening your email app to send this message...";
-            window.location.href = mailtoLink;
-        });
-    </script>
-
-    <footer class="ftr">
-        <p>
-            Jonathan Clifford &copy; 2025 | <i class="tel"></i> <a href="tel:4178308898">
-                (417)830-8898</a> | <i class="mail"></i> <a href="mailto:jnicholasclifford@gmail.com">
-                jnicholasclifford@gmail.com</a>
-        </p>
-    </footer>
+    <script src="main.js"></script>
 
 </body>
 
