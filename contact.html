@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="img/NameLogo.png" width="150" height="150" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="documents.html">Documents</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="contact.html"><button>Contact</button></a>
+    </header>
+
+    <main class="container" style="padding: 40px 0; background: transparent;">
+        <h1 style="text-align:center; background: transparent;">Contact Me</h1>
+
+        <form id="contactForm" class="contact-card">
+            <label>
+                Name *
+                <input type="text" id="name" required />
+            </label>
+
+            <label>
+                Email *
+                <input type="email" id="email" required />
+            </label>
+
+            <label>
+                Subject *
+                <input type="text" id="subject" required />
+            </label>
+
+            <label>
+                Message *
+                <textarea id="message" rows="6" required></textarea>
+            </label>
+
+            <button type="submit">Send Email</button>
+            <p id="formNote" style="margin-top:12px; color: var(--muted); background: transparent;"></p>
+        </form>
+    </main>
+
+    <script>
+        const form = document.getElementById("contactForm");
+        const note = document.getElementById("formNote");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const subject = document.getElementById("subject").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            // Build a nice email body
+            const body =
+                `Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+`;
+
+            // Your email address goes here:
+            const to = "jnicholasclifford@gmail.com";
+
+            // mailto link (encode to handle spaces/newlines)
+            const mailtoLink =
+                `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            note.textContent = "Opening your email app to send this message...";
+            window.location.href = mailtoLink;
+        });
+    </script>
+
+    <footer class="ftr">
+        <p>
+            Jonathan Clifford &copy; 2025 | <i class="tel"></i> <a href="tel:4178308898">
+                (417)830-8898</a> | <i class="mail"></i> <a href="mailto:jnicholasclifford@gmail.com">
+                jnicholasclifford@gmail.com</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

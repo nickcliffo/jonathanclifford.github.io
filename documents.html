@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="img/NameLogo.png" width="150" height="150" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="documents.html">Documents</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="contact.html"><button>Contact</button></a>
+    </header>
+
+    <main class="resume-content">
+        <h1 class="resume-title">My Resume</h1>
+
+        <div class="resume-viewer">
+            <object data="doc/JonathanCliffordResume.pdf" type="application/pdf">
+                <p>
+                    Your browser doesn’t support embedded PDFs.
+                    <a href="doc/JonathanCliffordResume.pdf" target="_blank">Download the PDF</a> instead.
+                </p>
+            </object>
+        </div>
+
+        <a href="doc/JonathanCliffordResume.pdf" target="_blank" class="resume-download">Download Resume</a>
+    </main>
+
+    <section class="cert-section">
+        <h2 class="cert-title">My Certificates</h2>
+
+        <div class="cert-grid">
+
+            <!-- Certificate 1 -->
+            <div class="cert-item">
+                <h3 class="cert-name">JavaScript</h3>
+
+                <div class="cert-viewer">
+                    <iframe src="doc/JavaScript.pdf#zoom=63" class="cert-pdf">
+                    </iframe>
+                </div>
+
+                <a href="doc/JavaScript.pdf" target="_blank" class="cert-download">
+                    Download Certificate
+                </a>
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="cert-item">
+                <h3 class="cert-name">HTML & CSS</h3>
+
+                <div class="cert-viewer">
+                    <iframe src="doc/HTML and CSS.pdf#zoom=63" class="cert-pdf">
+                    </iframe>
+                </div>
+
+                <a href="doc/HTML and CSS.pdf" target="_blank" class="cert-download">
+                    Download Certificate
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer class="ftr">
+        <p>
+            Jonathan Clifford &copy; 2025 | <i class="tel"></i> <a href="tel:4178308898">
+                (417)830-8898</a> | <i class="mail"></i> <a href="mailto:jnicholasclifford@gmail.com">
+                jnicholasclifford@gmail.com</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

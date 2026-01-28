@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="img/NameLogo.png" width="150" height="150" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="documents.html">Documents</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="contact.html"><button>Contact</button></a>
+    </header>
+
+    <main>
+        <!-- ABOUT HERO -->
+        <section class="container about-hero">
+            <div class="about-text">
+                <h1>Hi, I’m <span class="accent">Jonathan Clifford</span></h1>
+                <p>
+                    I’m a <strong>25-year-old</strong> tech enthusiast based in Springfield, Missouri. After graduating high
+                    school in 2018, I
+                    began pursuing higher education while building my career at <strong>Jack Henry</strong>, where I’ve
+                    worked since
+                    2019. I started in the call center and, driven by curiosity and a love for problem-solving,
+                    transitioned into IT in 2022.<br><br>
+
+                    Outside of work, I’m happily married and the proud owner of two dogs who keep life fun and
+                    energetic. I’m passionate about hands-on technology — from building FPV drones from scratch to
+                    experimenting with 3D printing, custom PC builds, and other creative projects that blend engineering
+                    and innovation.
+                </p>
+
+            </div>
+
+            <div class="portrait-wrap">
+                <img src="img/JNC.jpg" alt="Portrait of Your Name" class="portrait">
+            </div>
+        </section>
+
+        <!-- MEDIA GALLERY -->
+        <section class="container media-gallery" aria-labelledby="media-heading">
+            <h2 id="media-heading">Photos & Clips</h2>
+
+            <!-- 2 x 2 grid with square tiles -->
+            <div class="media-grid-2x2" role="list">
+                <!-- Tile 1 (Photo) -->
+                <figure class="media-tile" role="listitem">
+                    <img src="img/5inchDroneBuild.jpg" alt="Custom 5inch FPV Drone" loading="lazy">
+                </figure>
+
+                <!-- Tile 2 -->
+                <figure class="media-tile" role="listitem">
+                    <video autoplay loop muted playsinline preload="auto">
+                        <source src="vid/3.5Flight.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </figure>
+
+                <!-- Tile 3 -->
+                <figure class="media-tile" role="listitem">
+                    <video autoplay loop muted playsinline preload="auto">
+                        <source src="vid/31EFC121-8F19-4D80-9E98-B1E03686EDC7.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </figure>
+
+                <!-- Tile 4 -->
+                <figure class="media-tile" role="listitem">
+                    <img src="img/3dPrinter.jpg" alt="3D Printer printing" loading="lazy">
+                </figure>
+
+                <!-- Tile 5 -->
+                <figure class="media-tile" role="listitem">
+                    <img src="img/3.5Drone.jpg" alt="3D Printer printing" loading="lazy">
+                </figure>
+
+                <!-- Tile 6 -->
+                <figure class="media-tile" role="listitem">
+                    <video autoplay loop muted playsinline preload="auto">
+                        <source src="vid/Garden.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer class="ftr">
+        <p>
+            Jonathan Clifford &copy; 2025 | <i class="tel"></i> <a href="tel:4178308898">
+                (417)830-8898</a> | <i class="mail"></i> <a href="mailto:jnicholasclifford@gmail.com">
+                jnicholasclifford@gmail.com</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

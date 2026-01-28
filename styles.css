@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+:root {
+    --bg: #24252a;
+    --text: #edf0f1;
+    --muted: #b8bcc3;
+    --card: #2b2e34;
+    --accent: #0088a9;
+    --border: rgba(255, 255, 255, 0.06);
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252a;
+}
+
+/* NAV BAR Styles */
+
+li,
+a,
+button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+    font-size: x-large;
+}
+
+.nav__links li a:hover {
+    color: #0088a9;
+}
+
+button {
+    font-size: x-large;
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgb(6, 115, 143);
+}
+
+/* Footer Styles*/
+footer {
+    font-size: larger;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+footer a:hover {
+    color: #0088a9;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin-inline: auto;
+}
+
+
+h1,
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    background: transparent;
+
+}
+
+h1 {
+    font-size: clamp(28px, 4.5vw, 40px);
+    margin-bottom: 14px;
+}
+
+h2 {
+    font-size: clamp(22px, 3.2vw, 28px);
+    margin-bottom: 18px;
+    color: var(--text);
+}
+
+.accent {
+    color: var(--accent);
+}
+
+
+.about-hero {
+    display: grid;
+    grid-template-columns: 1.2fr .9fr;
+    align-items: center;
+    gap: 36px;
+    padding: 32px 0 12px;
+    background: transparent;
+}
+
+.about-text {
+    background: transparent;
+}
+
+.about-text p {
+    font-size: larger;
+    color: var(--muted);
+    margin-bottom: 18px;
+    line-height: 1.7;
+    background: transparent;
+}
+
+.quick-facts {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 18px;
+    background: transparent;
+}
+
+.quick-facts li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    color: var(--text);
+    background: transparent;
+}
+
+.quick-facts li span {
+    flex: 0 0 auto;
+    opacity: .9;
+    background: transparent;
+}
+
+.portrait-wrap {
+    background: transparent;
+}
+
+.portrait {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    background: #1f2024;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.portrait:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+}
+
+.media-gallery {
+    padding: 28px 0 64px;
+    background: transparent;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    background: transparent;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    border-color: rgba(0, 136, 169, 0.35);
+}
+
+.card img,
+.card video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #1f2024;
+}
+
+.card figcaption {
+    padding: 12px 14px 14px;
+    font-size: 14px;
+    color: var(--muted);
+    background: transparent;
+    border-top: 1px solid var(--border);
+}
+
+a:focus,
+button:focus,
+.card:focus-within {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 10px;
+}
+
+/* =============================
+   Resume Page Styles
+   ============================= */
+
+.resume-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10%;
+    background-color: #24252a;
+    color: #edf0f1;
+    font-family: "Montserrat", sans-serif;
+}
+
+.resume-title {
+    margin-bottom: 30px;
+    color: #edf0f1;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.resume-viewer {
+    width: 100%;
+    max-width: 900px;
+    height: 1000px;
+    border: 2px solid rgba(0, 136, 169, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 136, 169, 0.3);
+    overflow: hidden;
+}
+
+.resume-viewer object {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.resume-download {
+    margin-top: 20px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: #edf0f1;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.resume-download:hover {
+    background-color: rgb(6, 115, 143);
+}
+
+/* 2x2 square media gallery */
+.media-grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+/* Square tiles */
+.media-tile {
+    margin: 0;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    /* perfect square */
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Media fills the square */
+.media-tile img,
+.media-tile video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Looping videos should feel like previews (no interaction) */
+.media-tile video {
+    background: #000;
+    pointer-events: none;
+    /* removes click interaction */
+}
+
+/* =============================
+   Certificates Section (PDF previews)
+   ============================= */
+
+.cert-section {
+    width: 100%;
+    max-width: 1500px;   /* controls how wide the whole cert area is */
+    margin: 60px auto 0 auto;  /* centers it horizontally */
+    text-align: center;
+    background: transparent;
+    padding-bottom: 80px;
+}
+
+.cert-title {
+    margin-bottom: 18px;
+    background: transparent;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: center;   /* keeps grid centered inside section */
+}
+
+.cert-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+}
+
+.cert-name {
+    margin-bottom: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    background: transparent;
+    color: var(--text);
+}
+
+/* PDF preview box (like resume but smaller) */
+.cert-viewer {
+    width: 100%;
+    height: 600px;   /* ⬅ bigger preview window */
+    border: 2px solid rgba(0, 136, 169, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 0 18px rgba(0, 136, 169, 0.18);
+    overflow: hidden;
+}
+
+.cert-viewer object {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+}
+
+.cert-download {
+    display: inline-block;
+    margin-top: 14px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 22px;
+    text-decoration: none;
+    color: #edf0f1;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.cert-pdf {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+.cert-download:hover {
+    background-color: rgb(6, 115, 143);
+}
+
+.contact-card {
+  max-width: 700px;
+  margin: 30px auto 0;
+  padding: 22px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.contact-card label {
+  display: block;
+  text-align: left;
+  margin-bottom: 14px;
+  background: transparent;
+}
+
+.contact-card input,
+.contact-card textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: #1f2024;
+  color: var(--text);
+  font-family: "Montserrat", sans-serif;
+}
+
+
+@media (max-width: 900px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-viewer {
+        height: 600px;
+    }
+}
+
+
+/* Responsive: stack to 1 column on small screens */
+@media (max-width: 700px) {
+    .media-grid-2x2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 700px) {
+    .media-grid-2x2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+    .about-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .portrait {
+        aspect-ratio: 1 / 1;
+    }
+
+    .quick-facts {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .resume-viewer {
+        height: 600px;
+    }
+
+    .resume-title {
+        font-size: 1.6rem;
+    }
+
+    .resume-content {
+        padding: 30px 5%;
+    }
+}
