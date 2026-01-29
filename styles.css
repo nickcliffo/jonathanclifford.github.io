@@ -552,6 +552,171 @@ button:focus,
     background: rgba(255, 255, 255, 0.16);
 }
 
+/* =============================
+   Projects Page Layout
+   ============================= */
+
+.projects-main {
+    padding: 50px 0 80px;
+    background: transparent;
+}
+
+.projects-title {
+    text-align: center;
+    margin-bottom: 36px;
+    background: transparent;
+}
+
+/* Each project stack */
+.project-feature {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 26px;
+    align-items: start;
+    margin-bottom: 50px;
+    background: transparent;
+}
+
+/* Image container */
+.project-media {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.project-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    background: #1f2024;
+}
+
+/* Right side cards */
+.project-details {
+    display: grid;
+    gap: 18px;
+    background: transparent;
+}
+
+.project-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 18px;
+}
+
+.project-card h2,
+.project-card p,
+.project-card ul,
+.project-card li {
+    background: transparent;
+}
+
+.project-card p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-top: 8px;
+}
+
+.project-list {
+    margin-top: 10px;
+    padding-left: 18px;
+    color: var(--muted);
+}
+
+.project-list li {
+    margin: 6px 0;
+}
+
+/* Flip layout for alternating projects */
+.project-reverse .project-media {
+    order: 2;
+}
+
+.project-reverse .project-details {
+    order: 1;
+}
+
+/* GitHub button under project image */
+
+.project-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    padding-bottom: 14px; /* space for button */
+}
+
+.project-media img {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Button under image */
+.project-img-btn {
+    margin-top: 14px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    background: #24292e;  /* GitHub color */
+    color: white;
+    transition: 0.3s ease;
+}
+
+.project-img-btn:hover {
+    background: black;
+    transform: translateY(-2px);
+}
+
+.project-video {
+    width: 100%;
+    aspect-ratio: 18 / 12;
+    object-fit: cover;
+    display: block;
+    background: #1f2024;
+    pointer-events: none;
+}
+
+.project-video1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.project-video1 video {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+/* Mobile layout */
+@media (max-width: 900px) {
+    .project-feature {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 900px) {
     .cert-grid {
         grid-template-columns: 1fr;
